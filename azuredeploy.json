@@ -16,8 +16,7 @@
       "repoURL": "https://github.com/fashaikh/functions-msi-csharp.git",
       "branch": "master",
       "storageAccountName": "[concat('storage', uniquestring(resourceGroup().id))]",
-      "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-      "identityResourceId" : "[concat(resourceId('Microsoft.Web/sites', variables('functionAppName')),'/providers/Microsoft.ManagedIdentity/Identities/default')]"
+      "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
   },
     "resources": [
       {
@@ -102,11 +101,7 @@
                     },
                     {
                         "name": "tenantId",
-                        "value": "[reference(variables('identityResourceId'), '2015-08-31-PREVIEW').tenantId]"
-                    },
-                    {
-                      "name": "principalId",
-                      "value": "[reference(variables('identityResourceId'), '2015-08-31-PREVIEW').principalId]"
+                        "value": "[susbscription().tenantId]"
                     }
                 ]
             }
