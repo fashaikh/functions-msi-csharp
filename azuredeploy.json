@@ -17,7 +17,7 @@
       "branch": "master",
       "storageAccountName": "[concat('storage', uniquestring(resourceGroup().id))]",
       "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-      "identityResourceId" : "[concat(resourceId('Microsoft.Web/sites', parameters('webSiteName')),'/providers/Microsoft.ManagedIdentity/Identities/default')]"
+      "identityResourceId" : "[concat(resourceId('Microsoft.Web/sites', parameters('functionAppName')),'/providers/Microsoft.ManagedIdentity/Identities/default')]"
   },
     "resources": [
       {
