@@ -101,7 +101,7 @@
                     },
                     {
                         "name": "tenantId",
-                        "value": "[susbscription().tenantId]"
+                        "value": "[subscription().tenantId]"
                     }
                 ]
             }
