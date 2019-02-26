@@ -69,6 +69,9 @@
         "type": "Microsoft.Web/sites",
         "name": "[variables('functionAppName')]",
         "location": "[resourceGroup().location]",
+        "identity": {
+          "type": "SystemAssigned"
+        },
         "kind": "functionapp",
         "properties": {
             "name": "[variables('functionAppName')]",
@@ -127,39 +130,6 @@
                 }
             }
         ]
-    },
-        {
-          "apiVersion": "2015-08-01",
-          "name": "appsettings",
-          "type": "config",
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('webSiteName'))]"
-          ],
-          "properties": {
-            "tenantId": "[reference(variables('identityResourceId'), '2015-08-31-PREVIEW').tenantId]",
-            "principalId": "[reference(variables('identityResourceId'), '2015-08-31-PREVIEW').principalId]"
-          }
-        },
-
-        {
-            "apiVersion": "2016-03-01",
-            "name": "[parameters('webSiteName')]",
-            "type": "Microsoft.Web/sites",
-            "location": "[resourceGroup().location]",
-            "identity": {
-                "type": "SystemAssigned"
-            },
-            "dependsOn": [
-                "[variables('hostingPlanName')]"
-            ],
-            "tags": {
-                "[concat('hidden-related:', resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName')))]": "empty",
-                "displayName": "Website"
-            },
-            "properties": {
-                "name": "[parameters('webSiteName')]",
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
-            }
-        }
+    }
     ]
 }
