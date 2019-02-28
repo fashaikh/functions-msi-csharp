@@ -11,7 +11,7 @@ Once installed it creates a Function App linked to an MSI. If you go ahead and c
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://azuredeploy.net/)
 ### Step 1 Deploy FunctionApp Template ![Step 1](https://user-images.githubusercontent.com/2650941/53583547-a4c29880-3b36-11e9-808c-0b2937a43691.PNG)
 
-### To run in Azure, run the ARM Template found in azuredeploy.json and then fill in the app settings with the following values:
+#### To run in Azure, run the ARM Template found in azuredeploy.json and then fill in the app settings with the following values:
 - FunctionApp Name : The name of the function App you want to create
 
 In azure portal find the MSI that was created (search in Subscriptions View Access Control blase based on FunctionApp name) and update its permissions based on your needs. For multiple subscriptions you will have to repeat the step for each subscription
