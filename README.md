@@ -16,7 +16,7 @@ Once installed it creates a Function App linked to an MSI. If you go ahead and c
 
 In azure portal find the MSI that was created (search in Subscriptions View Access Control blade based on FunctionApp name) and update its permissions based on your needs. For multiple subscriptions you will have to repeat the step for each subscription
 
-### Step 2 Update Permissions : ![Step 2 Update Permissions](https://user-images.githubusercontent.com/2650941/53583563-aa1fe300-3b36-11e9-804f-b84243378aab.jpg)
+### Step 2 Update Permissions : ![Step 2 Update Permissions](https://user-images.githubusercontent.com/2650941/53596400-7eabf100-3b54-11e9-8009-adf94603cd1b.jpg)
 
 ### Step 3 Execute Function : ![Step 3 Execute Function ](https://user-images.githubusercontent.com/2650941/53583986-83ae7780-3b37-11e9-947f-5c5ce6c6e999.png)
 
