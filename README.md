@@ -1,4 +1,4 @@
-# FunctionApp with MSI in CSharp
+# FunctionApp with MSI in C#
 
 This is code for an [Azure Function](https://azure.microsoft.com/en-us/services/functions/) that is deployed to run using a Managed Service Identity (MSI).
 
